@@ -30,18 +30,10 @@
 
 	import { Component, Vue } from 'vue-property-decorator';
 	import Navbar from './views/Layout/Navbar';
-	import Contact from './views/About/Contact';
-	import Delivery from './views/About/Delivery';
-	import History from './views/About/History';
-	import Guide from './views/About/Guide';
 
 	@Component({
 		components: {
 		    Navbar,
-            Contact,
-            Delivery,
-            History,
-            Guide,
 		}
 	})
 	export default class App extends Vue{
