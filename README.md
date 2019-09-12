@@ -1,42 +1,28 @@
 # vuets-order
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ### What have I learned
 
-* 5-1.`<a href="/menu"></a>`也可以跳转路由，但是会有【刷新】。所以要替换成`<router-link to="/menu">菜单</router-link>`
-* 5-2.navbar里面的登录和注册的ul应该用`ml-auto`
-* 5-3.router-link后面的属性`to="/menu"===to="menu"`
+* 5-1.`<a href="/menu"></a>`  
+也可以跳转路由，但是会有【刷新】。所以要替换成  
+`<router-link to="/menu">菜单</router-link>`
+------------
+* 5-2.navbar里面的登录和注册的ul应该用  
+`ml-auto`
+------------
+* 5-3.router-link后面的属性  
+`to="/menu"===to="menu"`
+------------
 * 6-1.router-link的`tag`属性
-* 6-2.router-link属性to的动态绑定`:to="variable-name"`
-* 6-3.在配置router初期，先写成`{path: '*',redirect: '/',}`
-* 7-1.路由配置name属性，调用的时候用`:to="{name: homeLink}"`
+------------
+* 6-2.router-link属性to的动态绑定  
+`:to="variable-name"`
+------------
+* 6-3.在配置router初期，先写成   
+`{path: '*',redirect: '/',}`
+------------
+* 7-1.路由配置name属性，调用的时候用  
+`:to="{name: homeLink}"`
+------------
 * 7-2.路由跳转方式：
 ```javascript
 changeRouter () {
@@ -121,9 +107,9 @@ beforeRouteLeave (to, from, next) {
 }
 ```
 * 11-1.
-`<router-view>`的复用
+`<router-view>`的复用  
 // ???? 遗留了三级路由的问题 
-
+------------
 * 12-1
 滚动行为
 ```javascript
@@ -148,7 +134,7 @@ const router = new VueRouter({
 CSS :   
 `height: 85vh;`  
 `width: 75vw;`  
-
+------------
 
 
 
