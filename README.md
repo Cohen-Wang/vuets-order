@@ -52,12 +52,13 @@ changeRouter () {
 ```
 * 8-1.二级路由和三级路由
 ```javascript
-一级redirect: '/admin',
+一级redirect: '/admin'
 二级redirect: '/admin/contact'
 三级redirect: '/admin/contact/phone'
 ```
-*9-1.全局守卫
+* 9-1.全局守卫
 ```javascript
+router.js
 router.beforeEach((to, from, next) => {
 	if (to.path === '/login' || to.path === '/register') {
         next();
@@ -70,19 +71,83 @@ router.beforeEach((to, from, next) => {
     }
 })
 ```
-9-2.
+* 10-1.
 后置钩子
 ```javascript
+router.js
 router.afterEach((to, from) => {
 
 })
 ```
-独享守卫
+* 10-2.独享守卫
 ```javascript
+router.js
 router.beforeEnter((to, from, next) => {
     
 })
 ```
+
+* 10-3.组件内的守卫
+```javascript
+组件.vue
+beforeRouterEnter (to, from, next) {
+    console.log(this.name);// 无法获取，都还没有实例化
+    // 如何获取组件内部变量
+    next(vm => {
+        console.log(vm.name);
+    })
+}
+```
+```javascript
+组件.vue
+beforeRouteUpdate (to, from, next) {
+    // 在当前路由改变，但是该组件被复用时调用
+    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 `this`
+}
+```
+```javascript
+组件.vue
+beforeRouteLeave (to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+    let confirm = window.confirm('确认离开吗？');
+    if (confirm) {
+        next();
+    } else {
+        next(false);// ????
+    }
+}
+```
+* 11-1.
+`<router-view>`的复用
+// ???? 遗留了三级路由的问题 
+
+* 12-1
+滚动行为
+```javascript
+const router = new VueRouter({
+    routes: [...],
+    scrollBehavior (to, from, savedPosition) {
+        // return 期望滚动到哪个的位置
+        
+        // 1
+        //return {x: 0, y: 200};
+        // 2
+        //return {selector: '.btn'};
+        // 3
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return {x: 0, y: 0}
+        }
+    }
+})
+```
+CSS : 
+`height: 85vh;`
+`width: 75vw;`
 
 
 
