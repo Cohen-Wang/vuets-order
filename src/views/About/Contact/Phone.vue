@@ -1,13 +1,22 @@
 <template>
-    $END$
+    <div class="phone">
+        18302876099
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "Phone"
+<script lang="ts">
+    import { Component, Vue } from 'vue-property-decorator';
+
+    @Component({
+        components: {
+
+        },
+    })
+    export default class Phone extends Vue {
+
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

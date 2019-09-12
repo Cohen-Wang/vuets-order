@@ -1,13 +1,22 @@
 <template>
-    $END$
+    <div class="about">
+        about
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "About"
+<script lang="ts">
+    import { Component, Vue } from 'vue-property-decorator';
+
+    @Component({
+        components: {
+
+        },
+    })
+    export default class About extends Vue {
+
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
