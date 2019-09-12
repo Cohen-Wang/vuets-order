@@ -145,9 +145,9 @@ const router = new VueRouter({
     }
 })
 ```
-CSS : 
-`height: 85vh;`
-`width: 75vw;`
+CSS :   
+`height: 85vh;`  
+`width: 75vw;`  
 
 
 
