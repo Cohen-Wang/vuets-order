@@ -1,13 +1,22 @@
 <template>
-    $END$
+    <div class="register">
+        register
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "Register"
+<script lang="ts">
+    import { Component, Vue } from 'vue-property-decorator';
+
+    @Component({
+        components: {
+
+        },
+    })
+    export default class Register extends Vue {
+
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

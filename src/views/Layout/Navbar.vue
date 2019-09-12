@@ -1,13 +1,26 @@
 <template>
-    $END$
+    <div class="navbar">
+
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Navbar content -->
+        </nav>
+
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "Navbar"
+<script lang="ts">
+    import { Component, Vue } from 'vue-property-decorator';
+
+    @Component({
+        components: {
+
+        },
+    })
+    export default class Navbar extends Vue {
+
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
