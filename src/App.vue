@@ -5,7 +5,10 @@
 		<Navbar/>
 
 		<!-- 一级路由 -->
-		<router-view/>
+		<div class="container">
+			<router-view/>
+		</div>
+
 
 		<!--<div class="container" style="margin-bottom: 200px;">-->
 			<!--<div class="row">-->

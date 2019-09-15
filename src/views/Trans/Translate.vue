@@ -1,14 +1,16 @@
 <template>
     <div class="translate">
 
-        <div class="container">
-            <!-- 表单 -->
-            <TranslateForm @formSubmit="formSubmit"/>
+        <div class="row">
+            <div class="col-12">
+                <!-- 表单 -->
+                <TranslateForm @formSubmit="formSubmit"/>
 
-            <hr>
+                <hr>
 
-            <!-- 输出 -->
-            <TranslateOutput :translatedTextWhichIsBind="translatedText"/>
+                <!-- 输出 -->
+                <TranslateOutput :translatedTextWhichIsBind="translatedText"/>
+            </div>
         </div>
 
     </div>
