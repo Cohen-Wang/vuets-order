@@ -30,16 +30,16 @@
         @Provide()
         translatedText: string = '';
 
-        formSubmit (text): void {
+        formSubmit (text: string): void {
             (this as any).$axios
                 .get(`http://jsonplaceholder.typicode.com/users`
                 )
-                .then(res => {
-                    //console.log(res);
+                .then((res: any) => {
+                    console.log(res);
                     this.translatedText = '由于没有接API，所以没有翻译结果。';
                 })
-                .catch(err => {
-                    //console.log(err);
+                .catch((err: any) => {
+                    console.log(err);
                     this.translatedText = '由于没有接API，所以没有翻译结果。';
                 })
 

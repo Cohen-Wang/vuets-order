@@ -29,7 +29,7 @@
 <script lang="ts">
 
 	import { Component, Vue } from 'vue-property-decorator';
-	import Navbar from './views/Layout/Navbar';
+	import Navbar from './views/Layout/Navbar.vue';
 
 	@Component({
 		components: {
