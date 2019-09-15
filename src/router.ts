@@ -29,6 +29,11 @@ export const asyncRouterMap: any = [
         component: () => import('./views/Admin/Admin.vue'),
     },
     {
+        path: '/translate',
+        name: 'translate',
+        component: () => import('./views/Trans/Translate.vue'),
+    },
+    {
         path: '/about',
         name: 'about',
         component: () => import('./views/About/About.vue'),

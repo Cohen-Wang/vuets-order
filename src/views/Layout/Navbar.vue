@@ -25,6 +25,9 @@
                         <router-link class="nav-link" to="admin">管理</router-link>
                     </li>
                     <li class="nav-item">
+                        <router-link class="nav-link" to="translate">在线翻译</router-link>
+                    </li>
+                    <li class="nav-item">
                         <router-link class="nav-link" to="about">关于我们</router-link>
                     </li>
                 </ul>
