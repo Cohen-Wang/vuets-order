@@ -168,20 +168,20 @@ CSS :
 
 
 * 补充：翻译页面
-*子组件一传事件给父组件*
+**子组件一传事件给父组件**
 ```javascript
 TranslateForm.vue
 this.$emit('loginSubmit', param1, param2)
 ```
 
-*父组件接受并传递给子组件二*
+**父组件接受并传递给子组件二**
 ```javascript
 :loginSubmit="loginSubmit"
 
 :translatedText="translatedText"
 ```
 
-*子组件二接受*
+**子组件二接受**
 ```javascript
 Prop: ['translatedText']
 ```
