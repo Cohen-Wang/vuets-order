@@ -182,7 +182,7 @@ CSS :
 
 * 16-1 菜单页面
 **tbody内是可以写 v-for。tr内可以继续遍历**
-```javascript
+```html
 <tbody v-for="item in getMenuItems" :key="item.name">
 <tr>
     <td><strong v-text="item.name"></strong></td>
