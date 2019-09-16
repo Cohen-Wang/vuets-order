@@ -159,15 +159,47 @@ CSS :
 ------------
 
 * 13-1 登录和注册页面的布局（没学习头）
-
-
 ------------
 
+* 14-1 注册请求
+```javascript
+(this as any).$axios
+    .post('URL', formData)
+    .then((res: any) => {
+        console.log(res);
+        // 跳转
+        (this as any).$router.push('/login');
+    })
+    .catch((err: any) => {
+        console.log(err);
+    })
+```
+------------
+
+* 15-1 登录请求  
+与注册请求相同。没有讲如何将用户名赋值到导航条上面。
+------------
+
+* 16-1 菜单页面
+**tbody内是可以写 v-for。tr内可以继续遍历**
+```javascript
+<tbody v-for="item in getMenuItems" :key="item.name">
+<tr>
+    <td><strong v-text="item.name"></strong></td>
+</tr>
+<tr v-for="typeItem in item.options">
+    <td v-text="typeItem.size"></td>
+    <td v-text="typeItem.price"></td>
+</tr>
+</tbody>
+```
 
 
 
 
-* 补充：翻译页面
+
+* 补充：翻译页面  
+
 **子组件一传事件给父组件**
 ```javascript
 TranslateForm.vue

@@ -8,9 +8,7 @@ Vue.prototype.$axios = axios;
 
 // 配置默认根路径
 //axios.defaults.baseURL = 'http://wd1695319840sjftof';// 野狗
-//axios.defaults.baseURL = 'https://axios-app-b8cca.firebaseio.com/';// firebase
-
-
+axios.defaults.baseURL = 'https://axios-app-b8cca.firebaseio.com/';// firebase
 
 Vue.config.productionTip = false;
 

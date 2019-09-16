@@ -51,9 +51,26 @@
         password: string = '';
 
         loginSubmit (): void {
-            console.log('login');
-        }
+            // 准备数据
+            const formData = {
+                email: this.email,
+                password: this.password,
+            };
 
+            // 发送
+            (this as any).$axios
+                .post('http://jsonplaceholder.typicode.com/users', formData)
+                .then((res: any) => {
+                    console.log(res);
+                    alert(`由于没有链接后台，我只能假设你用邮箱${this.email}登录成功`);
+
+                    // 跳转
+                    (this as any).$router.push({name: 'home'});
+                })
+                .catch((err: any) => {
+                    console.log(err);
+                })
+        }
 
     }
 </script>

@@ -62,6 +62,29 @@
 
         registerSubmit (): void {
             console.log('register');
+            // 判断
+            if (this.password !== this.confirmPassword) {
+                alert('密码不一致');
+                return;
+            }
+            // 准备数据
+            const formData = {
+                email: this.email,
+                password: this.password,
+            };
+            // 发送
+            (this as any).$axios
+                .post('http://jsonplaceholder.typicode.com/users', formData)
+                .then((res: any) => {
+                    console.log(res);
+                    alert('注册成功，即将跳转到登录页面');
+
+                    // 跳转
+                    (this as any).$router.push('/login');
+                })
+                .catch((err: any) => {
+                    console.log(err);
+                })
         }
 
     }
