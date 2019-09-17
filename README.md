@@ -2,7 +2,8 @@
 
 ### What have I learned
 
-* 5-1.`<a href="/menu"></a>`  
+* 5-1.  
+`<a href="/menu"></a>`  
 也可以跳转路由，但是会有【刷新】。所以要替换成
 `<router-link to="/menu">menu</router-link>`
 ------------
@@ -30,7 +31,7 @@
 `:to="{name: homeLink}"`
 ------------
 
-* 7-2.路由跳转方式：
+* 7-2. **路由跳转方式**
 ```javascript
 changeRouter () {
     //
@@ -45,7 +46,7 @@ changeRouter () {
 ```
 
 
-* 8-1.二级路由和三级路由
+* 8-1. **二级路由和三级路由**
 
 ```javascript
 一级redirect: '/admin'
@@ -53,8 +54,7 @@ changeRouter () {
 三级redirect: '/admin/contact/phone'
 ```
 
-* 9-1.全局守卫
-
+* 9-1. **全局守卫**
 ```javascript
 router.js
 router.beforeEach((to, from, next) => {
@@ -70,7 +70,7 @@ router.beforeEach((to, from, next) => {
 })
 ```
 
-* 10-1.后置钩子
+* 10-1. **后置钩子**
 
 ```javascript
 router.js
@@ -79,8 +79,7 @@ router.afterEach((to, from) => {
 })
 ```
 
-* 10-2.独享守卫
-
+* 10-2. **独享守卫**
 ```javascript
 router.js
 router.beforeEnter((to, from, next) => {
@@ -88,8 +87,7 @@ router.beforeEnter((to, from, next) => {
 })
 ```
 
-* 10-3.组件内的守卫
-
+* 10-3. **组件内的守卫**
 ```javascript
 组件.vue
 beforeRouterEnter (to, from, next) {
@@ -125,12 +123,12 @@ beforeRouteLeave (to, from, next) {
 }
 ```
 
-* 11-1.
+* 11-1. 
 `<router-view>`的复用
 // TODO 遗留了三级路由的问题
 ------------
 
-* 12-1.滚动行为
+* 12-1. **滚动行为**
 
 ```javascript
 const router = new VueRouter({
@@ -158,10 +156,10 @@ CSS :
 
 ------------
 
-* 13-1 登录和注册页面的布局（没学习头）
+* 13-1 **登录和注册页面的布局（没学习头）**
 ------------
 
-* 14-1 注册请求
+* 14-1 **注册请求**
 ```javascript
 (this as any).$axios
     .post('URL', formData)
@@ -176,11 +174,11 @@ CSS :
 ```
 ------------
 
-* 15-1 登录请求  
+* 15-1 **登录请求**  
 与注册请求相同。没有讲如何将用户名赋值到导航条上面。
 ------------
 
-* 16-1 菜单页面
+* 16-1 **菜单页面**
 **tbody内是可以写 v-for。tr内可以继续遍历**
 ```html
 <tbody v-for="item in getMenuItems" :key="item.name">
