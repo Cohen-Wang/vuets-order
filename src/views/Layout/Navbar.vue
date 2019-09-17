@@ -16,28 +16,28 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <router-link class="nav-link" to="/">主页</router-link>
+                        <router-link class="nav-link" :to="{name: 'home'}">主页</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="menu">菜单</router-link>
+                        <router-link class="nav-link" :to="{name: 'menu'}">菜单</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="admin">管理</router-link>
+                        <router-link class="nav-link" :to="{name: 'admin'}">管理</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="translate">在线翻译</router-link>
+                        <router-link class="nav-link" :to="{name: 'translate'}">在线翻译</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="about">关于我们</router-link>
+                        <router-link class="nav-link" :to="{name: 'about'}">关于我们</router-link>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <router-link class="nav-link" to="login">登录</router-link>
+                        <router-link class="nav-link" :to="{name: 'login'}">登录</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="register">注册</router-link>
+                        <router-link class="nav-link" :to="{name: 'register'}">注册</router-link>
                     </li>
                 </ul>
             </div>

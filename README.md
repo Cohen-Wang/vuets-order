@@ -191,6 +191,119 @@ CSS :
 </tr>
 </tbody>
 ```
+------------
+
+* 17-1 **菜单布局（没学的）**
+------------
+
+
+* 18-1 **删除数量**
+```javascript
+// 写法一
+removeFromBaskets (index: number): void {
+    this.baskets.splice(index, 1);
+}
+// 写法二
+removeFromBaskets (item: any): void {
+    this.baskets.splice(this.baskets.indexOf(item), 1);
+}
+```
+------------
+
+* 19-1 **判断重复**
+```javascript
+// vue-property-decorator的计算属性用
+get total (): number {
+    return 123;
+}
+```
+
+```javascript
+// 判断物品是否相同的逻辑
+if (this.baskets.length > 0) {
+    // 过滤
+    let result = this.baskets.filter( (basket) => {
+        return (basket.name === item.name && basket.price === option.price)
+    });
+
+    if (result !== null && result.length > 0) {
+        result[0].quantity++;
+    } else {
+        this.baskets.push(baskets);
+    }
+} else {
+    this.baskets.push(baskets);
+}
+```
+------------
+
+* 20-1 **布局admin页面**
+```javascript
+// 初始化newPizza时，newPizza可以没有任何属性
+// 除非需要默认值
+@Provide
+newPizza = {};
+```
+------------
+
+* 21-1 **布局admin页面**
+```javascript
+// fetch
+fetch('http://www.baidu.com/menu.json', {
+    method: 'POST',
+    header: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+})
+    .then(res => res.json())
+    .then(data => this.$router.push({name: 'menu'}))
+    .catch(err => console.log(err))
+```
+------------
+
+* 22-1 **删除已有pizza**
+```javascript
+/** 删除 **/
+deleteItem (item: any): void {
+    (this as any).$axios
+        .post('', item)
+        .then((res: any) => {
+            console.log(res);
+            this.menuItems.splice(this.menuItems.indexOf(item), 1);
+        })
+        .catch((err: any) => {
+            console.log(err)
+        })
+};
+```
+------------
+
+* 22-1 **删除已有pizza**
+```javascript
+// 从fetch改为axios
+// 全局
+axios.default.baseUrl = '';
+Vue.prototype.$axios = axios;
+
+// 局部
+import axios from 'axios';
+```
+------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
