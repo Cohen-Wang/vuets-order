@@ -279,9 +279,8 @@ deleteItem (item: any): void {
 ```
 ------------
 
-* 22-1 **删除已有pizza**
+* 22-1 **fetch改为axios**
 ```javascript
-// 从fetch改为axios
 // 全局
 axios.default.baseUrl = '';
 Vue.prototype.$axios = axios;
@@ -290,16 +289,6 @@ Vue.prototype.$axios = axios;
 import axios from 'axios';
 ```
 ------------
-
-
-
-
-
-
-
-
-
-
 
 
 
